@@ -28,11 +28,11 @@ CREATE DATABASE db_loja_sapatos;
 USE db_loja_sapatos;
 CREATE TABLE tb_produtos(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    marca VARCHAR(255),
-    preco DOUBLE,
-	tamanho INT,
-    categoria VARCHAR(255),
-    cor VARCHAR(255)
+    marca VARCHAR(255) NOT NULL,
+    preco DOUBLE NOT NULL,
+	tamanho INT NOT NULL,
+    categoria VARCHAR(255) NOT NULL,
+    cor VARCHAR(255) NOT NULL
 );
 INSERT INTO tb_produtos(marca,preco,tamanho,categoria,cor)VALUES
 ("Ramarim", 300.0, 37,"Sandalia", "Dourada"),
@@ -55,10 +55,10 @@ UPDATE tb_produtos SET marca ="Ramarim" WHERE id = 6;
 USE db_escola;
 CREATE TABLE tb_estudantes(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nome_aluno VARCHAR(255),
-    idade INT,
-    materia VARCHAR(255),
-    nota DOUBLE
+    nome_aluno VARCHAR(255) NOT NULL,
+    idade INT NOT NULL,
+    materia VARCHAR(255) NOT NULL,
+    nota DOUBLE NOT NULL
 );
 INSERT INTO tb_estudantes(nome_aluno, idade, materia, nota) VALUE
 ("Marcela dos Reis",15,"Matemática",8.0),
