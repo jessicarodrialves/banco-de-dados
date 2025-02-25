@@ -7,7 +7,7 @@ CREATE TABLE tb_colaboradores(
     nome VARCHAR(255) NOT NULL,
     idade INT NOT NULL,
     funcional INT NOT NULL,
-    salario DOUBLE NOT NULL,
+    salario DECIMAL NOT NULL,
     funcao VARCHAR(255) NOT NULL
 );
 INSERT INTO tb_colaboradores (nome, idade, funcional, salario, funcao) VALUES
@@ -29,7 +29,7 @@ USE db_loja_sapatos;
 CREATE TABLE tb_produtos(
 	id BIGINT AUTO_INCREMENT PRIMARY KEY,
     marca VARCHAR(255) NOT NULL,
-    preco DOUBLE NOT NULL,
+    preco DECIMAL NOT NULL,
 	tamanho INT NOT NULL,
     categoria VARCHAR(255) NOT NULL,
     cor VARCHAR(255) NOT NULL
@@ -58,7 +58,7 @@ CREATE TABLE tb_estudantes(
     nome_aluno VARCHAR(255) NOT NULL,
     idade INT NOT NULL,
     materia VARCHAR(255) NOT NULL,
-    nota DOUBLE NOT NULL
+    nota DECIMAL NOT NULL
 );
 INSERT INTO tb_estudantes(nome_aluno, idade, materia, nota) VALUE
 ("Marcela dos Reis",15,"Matemática",8.0),
